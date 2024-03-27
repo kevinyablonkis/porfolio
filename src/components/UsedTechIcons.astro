@@ -1,0 +1,8 @@
+---
+const { color } = Astro.props
+---
+<div class="relative flex items-center justify-center">
+    <div class="absolute w-9 h-9 blur-md" style=`background-color: #${ color };`>
+    </div>
+    <slot />
+</div>
