@@ -27,27 +27,23 @@ const { title } = Astro.props;
 		<link href="https://fonts.googleapis.com/css2?family=Inria+Sans:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap" rel="stylesheet">
 		<title>{title}</title>
 	</head>
-	<body>
-		<Header />
-		<main class="relative flex flex-col items-center justify-center z-10 bg-transparent">
-			<div class="absolute top-0 bottom-0 left-0 right-0">
-				<div class="relative">
-					<div class="absolute rounded-full w-350 h-350 bg-violet-900 blur-2xl"></div>
-					<div class="absolute rounded-full w-180 h-180 bg-purple-800 blur-2xl"></div>
-					<div class="absolute rounded-full w-90 h-90 bg-pink-400 blur-2xl"></div>
-				</div>
-			</div>
-			<slot />
-			<ButtonScrollTop />
-		</main>
-		<Footer />
+	<body class="relative">
+      <Header />
+      <div class="fixed top-0 bottom-0 left-0 right-0 translate-x-[-50%] translate-y-[-50%] size-[500px] bg-[#3A1BB8] z-[0] blur-[150px]"></div>
+      <div class="fixed bottom-60 right-16 size-20 bg-[#644399] z-[0] blur-[45px]"></div>
+      <div class="fixed bottom-20 right-32 size-10 bg-[#A557A2] z-[0] blur-[35px]"></div>
+      <main class="flex flex-col items-center justify-center z-[111] bg-transparent">
+        <slot />
+        <ButtonScrollTop />
+      </main>
+      <Footer />
 	</body>
 </html>
 <style is:global>
 	:root {
 		font-family: sans-serif;
 		color-scheme: light dark;
-    scrollbar-color: #bababa #05050500;
+    scrollbar-width: none;
 	}
   
   html {
@@ -219,7 +215,7 @@ const { title } = Astro.props;
   .animation__img {
     width: 200px;
     border-radius: 100px;
-    z-index: 1111;
+    z-index: 1;
   }
 
   .spinner {

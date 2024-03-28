@@ -2,6 +2,36 @@
 const { Mode } = Astro.props
 ---
 
-<button class=" border-2 border-white rounded-full p-2">
-    <slot />
+<!-- <button class="relative border-2 border-white rounded-full bg-[#141414]">
+    <div class="flex flex-col items-center justify-center gap-1 p-2 px-3">
+        <div class="btn flex flex-row gap-1 z-[1111]">
+            <svg width="22"  height="22"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-language"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M4 5h7" /><path d="M9 3v2c0 4.418 -2.239 8 -5 8" /><path d="M5 9c0 2.144 2.952 3.908 6.7 4" /><path d="M12 20l4 -9l4 9" /><path d="M19.1 18h-6.2" /></svg>
+            <span class="inria-sans-bold">Lenguage</span>
+        </div>
+        <div class="lenguage absolute bottom-[-170%] left-0 right-0 flex flex-col items-center justify-center-col gap-1 border-2 py-2 pt-6 bg-[#1414145f] z-0" style="z-index: 0; border-radius: 0 0 16px 16px;">
+            <a class="inria-sans-regular hover:font-bold" href="/es">Spanish</a>
+            <a class="inria-sans-regular hover:font-bold" href="/">English</a>
+        </div>
+    </div>
+</button> -->
+
+
+<button id="dropdownDefaultButton" data-dropdown-toggle="dropdown" class="flex flex-row gap-1 text-white bg-[#141414] hover:bg-[#0b0b0b] focus:bg-[#0b0b0b] px-4 py-2 items-center border-2 rounded-full inria-sans-bold" type="button">
+    <svg width="22"  height="22"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-language"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M4 5h7" /><path d="M9 3v2c0 4.418 -2.239 8 -5 8" /><path d="M5 9c0 2.144 2.952 3.908 6.7 4" /><path d="M12 20l4 -9l4 9" /><path d="M19.1 18h-6.2" /></svg>
+    Language
 </button>
+    
+    <!-- Dropdown menu -->
+    <div id="dropdown" class="z-10 hidden bg-[#14141497] border-2 rounded-lg shadow w-28 overflow-hidden">
+        <ul class="text-sm" aria-labelledby="dropdownDefaultButton">
+          <li>
+            <a href="/es" class="inria-sans-bold text-white hover:bg-[#141414ae] block px-4 py-2">Spanish</a>
+          </li>
+          <li>
+            <a href="/" class="inria-sans-bold text-white hover:bg-[#141414ae] block px-4 py-2">English</a>
+          </li>
+        </ul>
+    </div>
+
+
+<script is:inline src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.8.0/flowbite.min.js"></script>
