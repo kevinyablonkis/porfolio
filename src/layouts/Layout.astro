@@ -15,7 +15,7 @@ const { title } = Astro.props;
 		<meta charset="UTF-8" />
 		<meta name="description" content="Astro description" />
 		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<link rel="icon" type="image/svg+xml" href="./assets/icons/code.svg" />
 		<meta name="generator" content={Astro.generator} />
 		<!-- FONT KANIT -->
 		<link rel="preconnect" href="https://fonts.googleapis.com">
@@ -47,9 +47,19 @@ const { title } = Astro.props;
 	:root {
 		font-family: sans-serif;
 		color-scheme: light dark;
-    scroll-behavior: smooth;
     scrollbar-color: #bababa #05050500;
 	}
+  
+  html {
+    scroll-behavior: smooth;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+  }
+
 	.kanit-thin {
     font-family: "Kanit", sans-serif;
     font-weight: 100;
@@ -206,48 +216,36 @@ const { title } = Astro.props;
     overflow: hidden;
   }
 
-  .animation__circle {
-    position: absolute;
-    left: 0;
-    transform: translate(-50%,0%);
-    width: 150px;
-    height: 150px;
-    border-radius: 100px;
-    background-color: rgb(17, 175, 162);
-    filter: blur(25px);
-    animation: animacion-circle 10s infinite;
-  }
-
   .animation__img {
     width: 200px;
     border-radius: 100px;
     z-index: 1111;
   }
-  @keyframes animacion-circle {
-    0% {
-        transform: translate(-40%,0%);
-    }
-    14.28% {
-        transform: translate(-15%,-35%);
-    }
-    28.57% {
-        transform: translate(45%,-50%);
-    }
-    42.85% {
-        transform: translate(80%,0%);
-    }
-    57.14% {
-        transform: translate(50%,50%);
-    }
-    71.42% {
-        transform: translate(20%,60%);
-    }
-    85.71% {
-        transform: translate(-25%,40%);
-    }
-    100% {
-        transform: translate(-50%,0%);
-    }
+
+  .spinner {
+  position: absolute;
+  background-image: linear-gradient(rgb(186, 66, 255) 35%,rgb(0, 225, 255));
+  width: 220px;
+  height: 220px;
+  animation: spinning82341 2.5s linear infinite;
+  text-align: center;
+  border-radius: 1000px;
+  filter: blur(1px);
+  box-shadow: 0px -5px 20px 0px rgb(186, 66, 255), 0px 5px 20px 0px rgb(0, 225, 255);
+}
+
+.spinner1 {
+  background-color: rgb(36, 36, 36);
+  width: 220px;
+  height: 220px;
+  border-radius: 1000px;
+  filter: blur(10px);
+}
+
+@keyframes spinning82341 {
+  to {
+    transform: rotate(360deg);
   }
+}
 
 </style>
