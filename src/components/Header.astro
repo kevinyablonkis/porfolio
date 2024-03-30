@@ -3,13 +3,26 @@ import ButtonMode from './ButtonMode.astro'
 import ButtonLanguage from './ButtonLanguage.astro'
 ---
 
-<header class="fixed top-0 left-0 px-5 py-3 z-20">
-    <nav class="flex flex-row items-center justify-center gap-5">
+<header class="fixed top-0 left-0 px-5 py-3 z-20 ">
+    <nav class="flex flex-row items-center sm:justify-center justify-between gap-5">
         <ul class="flex flex-row gap-5">
             <li class="inria-sans-bold"><a href="#proyects">Proyects</a></li>
-            <li class="inria-sans-bold"><a href="#skills">Skills</a></li>
-            <li class="inria-sans-bold"><a href="#about_me">About Me</a></li>
+            <li class="inria-sans-bold cursor-pointer"><a id="linkToSkills">Skills</a></li>
+            <li class="inria-sans-bold"><a href="#about-me">About Me</a></li>
         </ul>
         <ButtonLanguage />
     </nav>
 </header>
+
+<script>
+    const linkToSkills: HTMLAnchorElement = document.getElementById('linkToSkills') as HTMLAnchorElement;
+
+    linkToSkills?.addEventListener('click', (event:MouseEvent) => {
+
+        const skill: HTMLElement = document.getElementById('skill') as HTMLElement
+        const skills: HTMLElement = document.getElementById('skills') as HTMLElement;
+
+        skill?.scrollIntoView({behavior: "smooth",});
+        skills?.scrollIntoView({behavior: "smooth",});
+    })
+</script>

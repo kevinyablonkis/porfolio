@@ -4,22 +4,21 @@ const { Img1, Img2, Img3, Img4 } = Astro.props
 
 <div class="div">
   <!-- Swiper -->
-  <div class="swiper mySwiper">
+  <div class="swiper mySwiper sm:w-[330px] w-[250px]">
     <div class="swiper-wrapper p-3">
       <div class="swiper-slide">
-        <img src=`./assets/img/${ Img1 }` alt=`${ Img1 }` loading="lazy"/>
+        <img class="imagen1" src=`./assets/img/${ Img1 }` alt=`${ Img1 }` loading="lazy"/>
       </div>
       <div class="swiper-slide">
-        <img src=`./assets/img/${ Img2 }` alt=`${ Img2 }` loading="lazy"/>
+        <img class="imagen1" src=`./assets/img/${ Img2 }` alt=`${ Img2 }` loading="lazy"/>
       </div>
       <div class="swiper-slide">
-        <img src=`./assets/img/${ Img3 }` alt=`${ Img3 }` loading="lazy"/>
+        <img class="imagen1" src=`./assets/img/${ Img3 }` alt=`${ Img3 }` loading="lazy"/>
       </div>
       <div class="swiper-slide">
-        <img src=`./assets/img/${ Img4 }` alt=`${ Img4 }` loading="lazy"/>
+        <img class="imagen1" src=`./assets/img/${ Img4 }` alt=`${ Img4 }` loading="lazy"/>
       </div>
     </div>
-    <div class="swiper-pagination"></div>
   </div>
 </div>
 
@@ -37,7 +36,6 @@ const { Img1, Img2, Img3, Img4 } = Astro.props
   }
 
   .swiper {
-    width: 330px;
     height: auto;
     margin: 10px 0;
   }
@@ -69,20 +67,36 @@ const { Img1, Img2, Img3, Img4 } = Astro.props
   }
 </style>
 
-<!-- Swiper JS -->
-<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"
-></script>
-
 <!-- Initialize Swiper -->
 <script>
-  import Swiper from 'swiper'
+  import type { string } from 'astro/zod';
+import type { Image } from 'astro:assets';
+import Swiper from 'swiper'
 
     var swiper = new Swiper('.mySwiper', {
       slidesPerView: 2.5,
       spaceBetween: 10,
-      pagination: {
-        el: ".swiper-pagination",
-        clickable: true,
-      },
     });
+
+    function cambiarImagen(imagen: HTMLImageElement, imagen2: HTMLImageElement, nuevaFuente?: string) {
+      const pathOrigen: string = imagen.src;
+      if (nuevaFuente) {
+        imagen.src = nuevaFuente;
+      } else {
+        imagen2.src = pathOrigen;
+      }
+    }
+
+    const imagenes: NodeListOf<HTMLImageElement> = document.querySelectorAll('.imagen1');
+    const imagenes2: NodeListOf<HTMLImageElement> = document.querySelectorAll('.imagen2');
+
+    imagenes.forEach((imagen) => {
+      imagenes2.forEach((imagen2) => {
+        imagen.addEventListener('click', (event: MouseEvent) => {
+          cambiarImagen(imagen, imagen2);
+        });
+      });
+    });
+
+
 </script>
