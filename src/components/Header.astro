@@ -3,15 +3,18 @@ import ButtonMode from './ButtonMode.astro'
 import ButtonLanguage from './ButtonLanguage.astro'
 ---
 
-<header class="fixed top-0 left-0 px-5 py-3 z-20 ">
-    <nav class="flex flex-row items-center sm:justify-center justify-between gap-5">
-        <ul class="flex flex-row gap-5">
-            <li class="inria-sans-bold"><a href="#proyects">Proyects</a></li>
-            <li class="inria-sans-bold cursor-pointer"><a id="linkToSkills">Skills</a></li>
-            <li class="inria-sans-bold"><a href="#about-me">About Me</a></li>
-        </ul>
-        <ButtonLanguage />
-    </nav>
+<header class="fixed top-0 left-0 flex flex-row px-2 py-2 z-20 ">
+    <div class="relative px-3 py-4 overflow-hidden rounded-md sm:pr-[150px] pr-[80px]">
+        <nav class="flex flex-row items-center sm:justify-center justify-between gap-5 z-20">
+            <ul class="flex flex-row gap-5">
+                <li class="inria-sans-bold z-20"><a href="#proyects">Proyects</a></li>
+                <li class="inria-sans-bold z-20 cursor-pointer"><a id="linkToSkills">Skills</a></li>
+                <li class="inria-sans-bold z-20"><a href="#about-me">About Me</a></li>
+            </ul>
+        </nav>
+        <div class="absolute top-0 left-0 right-0 bottom-0 overflow-hidden blur-2xl rounded-sm bg-[#000000ce] z-0"></div>
+    </div>
+    <ButtonLanguage />
 </header>
 
 <script>

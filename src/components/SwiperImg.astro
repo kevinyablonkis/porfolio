@@ -79,24 +79,46 @@ import Swiper from 'swiper'
     });
 
     function cambiarImagen(imagen: HTMLImageElement, imagen2: HTMLImageElement, nuevaFuente?: string) {
-      const pathOrigen: string = imagen.src;
-      if (nuevaFuente) {
-        imagen.src = nuevaFuente;
-      } else {
-        imagen2.src = pathOrigen;
-      }
+  const pathOrigen: string = imagen.src;
+  if (nuevaFuente) {
+    imagen.src = nuevaFuente;
+  } else {
+    imagen2.src = pathOrigen;
+  }
+}
+
+const imagenes: NodeListOf<HTMLImageElement> = document.querySelectorAll('.imagen1');
+const imagenes2: NodeListOf<HTMLImageElement> = document.querySelectorAll('.imagen2');
+
+imagenes.forEach((imagen) => {
+  imagen.addEventListener('click', (event: MouseEvent) => {
+    const imagen2Cercana = imagen.closest('.imagen2');
+    if (imagen2Cercana) {
+      cambiarImagen(imagen, imagen2Cercana);
     }
+  });
+});
 
-    const imagenes: NodeListOf<HTMLImageElement> = document.querySelectorAll('.imagen1');
-    const imagenes2: NodeListOf<HTMLImageElement> = document.querySelectorAll('.imagen2');
 
-    imagenes.forEach((imagen) => {
-      imagenes2.forEach((imagen2) => {
-        imagen.addEventListener('click', (event: MouseEvent) => {
-          cambiarImagen(imagen, imagen2);
-        });
-      });
-    });
+    // function cambiarImagen(imagen: HTMLImageElement, imagen2: HTMLImageElement, nuevaFuente?: string) {
+    //   const pathOrigen: string = imagen.src;
+    //   if (nuevaFuente) {
+    //     imagen.src = nuevaFuente;
+    //   } else {
+    //     imagen2.src = pathOrigen;
+    //   }
+    // }
+
+    // const imagenes: NodeListOf<HTMLImageElement> = document.querySelectorAll('.imagen1');
+    // const imagenes2: NodeListOf<HTMLImageElement> = document.querySelectorAll('.imagen2');
+
+    // imagenes.forEach((imagen) => {
+    //   imagenes2.forEach((imagen2) => {
+    //     imagen.addEventListener('click', (event: MouseEvent) => {
+    //       cambiarImagen(imagen, imagen2);
+    //     });
+    //   });
+    // });
 
 
 </script>
