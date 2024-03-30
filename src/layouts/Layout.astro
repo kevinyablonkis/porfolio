@@ -1,7 +1,4 @@
 ---
-import Header from '../components/Header.astro';
-import Footer from '../components/Footer.astro';
-import ButtonScrollTop from '../components/ButtonScrollTop.astro'
 interface Props {
 	title: string;
 }
@@ -10,13 +7,13 @@ const { title } = Astro.props;
 ---
 
 <!doctype html>
-<html lang="en">
+<html lang="en/es">
 	<head>
 		<meta charset="UTF-8" />
-		<meta name="description" content="Astro description" />
+		<meta name="description" content="his is a small web page for you to see my skills and experiences. Here you can see the technologies that I usually use, and the projects where I have implemented them." />
 		<meta name="viewport" content="width=device-width" />
 		<link rel="icon" type="image/svg+xml" href="./assets/icons/code.svg" />
-		<meta name="generator" content={Astro.generator} />
+		<meta name="generator" content={title} />
 		<!-- FONT KANIT -->
 		<link rel="preconnect" href="https://fonts.googleapis.com">
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -25,22 +22,10 @@ const { title } = Astro.props;
 		<link rel="preconnect" href="https://fonts.googleapis.com">
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 		<link href="https://fonts.googleapis.com/css2?family=Inria+Sans:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap" rel="stylesheet">
-    <!-- Link Swiper's CSS -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 		<title>{title}</title>
 	</head>
 	<body class="relative">
-      <Header />
-      <div class="fixed top-0 bottom-0 left-0 right-0 translate-x-[-50%] translate-y-[-50%] size-[500px] bg-[#3A1BB8] z-[0] blur-[150px]"></div>
-      <div class="fixed bottom-60 right-16 size-20 bg-[#644399] z-[0] blur-[45px]"></div>
-      <div class="fixed bottom-20 right-32 size-10 bg-[#A557A2] z-[0] blur-[35px]"></div>
-      <main class="flex flex-col items-center justify-center z-[111] bg-transparent">
-        <slot />
-        <ButtonScrollTop />
-      </main>
-      <Footer />
-      <!-- Swiper JS -->
-      <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+      <slot />
 	</body>
 </html>
 <style is:global>

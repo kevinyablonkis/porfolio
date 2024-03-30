@@ -1,314 +1,232 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import ButtonSimple from '../components/ButtonSimple.astro';
+import Header from '../components/Header.astro';
+import SwiperImg from '../components/SwiperImg.astro';
+import Footer from '../components/Footer.astro';
 import UsedTechIcons from '../components/UsedTechIcons.astro';
 import TechIcons from '../components/TechIcons.astro';
-import SwiperImg from '../components/SwiperImg.astro';
+import ButtonScrollTop from '../components/ButtonScrollTop.astro';
+import ButtonViewCode from '../components/ButtonViewCode.astro';
+import ButtonContact from '../components/ButtonContact.astro';
+import ButtonLinkedin from '../components/ButtonLinkedin.astro';
 ---
 
 <Layout title="Kevin Yablonkis - Portfolio">
-	<section class="h-screen flex sm:flex-row flex-col items-center justify-center gap-8 pt-[25px] z-10">
-		<div class="animation">
-			<div class="spinner">
-				<div class="spinner1"></div>
-			</div>
-			<img class="animation__img" alt=Image-foto"" src="./assets/img/foto_cv-0.webp">
-		</div>
-		<div class="flex flex-col gap-5 sm:items-start items-center justify-start">
-			<div class="flex flex-col sm:items-start items-center justify-center">
-				<h1 class="kanit-bold text-4xl">
-					Hello,
-					<span class="kanit-light text-3xl"> I'm</span>
-				</h1>
-				<div class="flex flex-col items-center justify-center gap-3">
-					<span class="kanit-bold sm:text-5xl text-4xl" style="text-shadow: -4px -4px 10px #2719CE, 4px 4px 10px #8442EF;">Kevin Yablonkis</span>
+	<Header Link1="Proyects" Link2="Skills" Link3="About Me" TitleLanguage="Language" , Language1="Spanish" Language2="English" />
+      <div class="fixed top-0 bottom-0 left-0 right-0 translate-x-[-50%] translate-y-[-50%] size-[500px] bg-[#3A1BB8] z-[0] blur-[150px]"></div>
+      <div class="fixed bottom-60 right-16 size-20 bg-[#644399] z-[0] blur-[45px]"></div>
+      <div class="fixed bottom-20 right-32 size-10 bg-[#A557A2] z-[0] blur-[35px]"></div>
+      <main class="flex flex-col items-center justify-center z-[111] bg-transparent">
+		<section class="h-screen flex sm:flex-row flex-col items-center justify-center gap-8 pt-[25px] z-10">
+			<div class="animation">
+				<div class="spinner">
+					<div class="spinner1"></div>
 				</div>
+				<img class="animation__img" alt=Image-foto"" src="./assets/img/foto_cv-0.webp">
 			</div>
-			<div class="sm:text-start text-center">
-				<h2 class="kanit-bold sm:text-4xl text-3xl">WEB DEVELOPER</h2>
-				<span class="kanit-extralight text-3xl">Full-Stack</span>
-			</div>
-			<div class="flex flex-row items-center justify-start gap-5">
-				<a href="" target="_blank">
-					<ButtonSimple>
-						<svg width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-mail"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M3 7a2 2 0 0 1 2 -2h14a2 2 0 0 1 2 2v10a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2v-10z" /><path d="M3 7l9 6l9 -6" /></svg>
-						<span class="inria-sans-bold">Contact</span>
-					</ButtonSimple>
-				</a>
-					<a href="https://www.linkedin.com/in/kevin-yablonkis-7253012a7/" target="_blank">
-					<ButtonSimple>
-						<svg width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-brand-linkedin"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M4 4m0 2a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v12a2 2 0 0 1 -2 2h-12a2 2 0 0 1 -2 -2z" /><path d="M8 11l0 5" /><path d="M8 8l0 .01" /><path d="M12 16l0 -5" /><path d="M16 16v-3a2 2 0 0 0 -4 0" /></svg>
-						<span class="inria-sans-bold">Linkedin</span>
-					</ButtonSimple>
-				</a>
-			</div>
-			<div></div>
-		</div>
-	</section>
-	<section class="flex flex-col items-center justify-center my-8 z-10" id="proyects">
-		<h2 class="kanit-extrabold text-5xl" style="text-shadow: 1px 1px 2px #57A564, 0 0 1em #57A564, 0 0 0.2em #57A564;">PROYECTS</h2>
-		<div class="flex flex-col items-center justify-center gap-20 sm:my-14 my-8">
-			<div class="flex sm:flex-row flex-col items-center justify-center sm:gap-5 gap-8 sm:p-7 py-7 px-0 rounded-2xl shadow-2xl shadow-[#030303a2] bg-[#1414145f] sm:w-[720px] w-[320px]">
-				<div class="flex flex-col items-center justify-center gap-5">
-					<SwiperImg Img1="home-dark.webp" Img2="launcher.webp" Img3="login.webp" Img4="query-info-result.webp" ImgBig="home-dark.webp" ClassUnique="" />
-				</div>
-				<div class="flex flex-col gap-3 sm:w-auto w-[300px]">
-					<h3 class="kanit-medium m-auto text-3xl">UNEFA WMS</h3>
-					<p class="px-2 text-balance">Un Sistema de Gestión de Inventario (WMS) para la universidad enfocado en la adminitración de bienes e inmuebles. Se crearon; Launcher, Login, Base de Datos y funciones de insersión en archivos Excel.</p>
-					<div class="flex flex-row items-center justify-center gap-12 my-6">
-						<UsedTechIcons color="FFDF00">
-							<img class="w-8 shadow-white drop-shadow-md" src="./assets/img/js.webp" alt="" loading="lazy">
-						</UsedTechIcons>
-						<UsedTechIcons color="8DD2F3">
-							<img class="w-14 shadow-white drop-shadow-md" src="./assets/img/sqlite.webp" alt="" loading="lazy">
-						</UsedTechIcons>
-						<UsedTechIcons color="589A43">
-							<img class="w-8 shadow-white drop-shadow-md" src="./assets/img/nodejs.webp" alt="" loading="lazy">
-						</UsedTechIcons>
+			<div class="flex flex-col gap-5 sm:items-start items-center justify-start">
+				<div class="flex flex-col sm:items-start items-center justify-center">
+					<h1 class="kanit-bold text-4xl">
+						Hello,
+						<span class="kanit-light text-3xl"> I'm</span>
+					</h1>
+					<div class="flex flex-col items-center justify-center gap-3">
+						<span class="kanit-bold sm:text-5xl text-4xl" style="text-shadow: -4px -4px 10px #2719CE, 4px 4px 10px #8442EF;">Kevin Yablonkis</span>
 					</div>
-					<a class="m-auto" href="https://github.com/kevinyablonkis/unefa-wms" target="_blank">
-						<ButtonSimple>
-							<svg width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-brand-github"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5" /></svg>
-							<span class="font-bold">
-								View code
-							</span>
-						</ButtonSimple>
+				</div>
+				<div class="sm:text-start text-center">
+					<h2 class="kanit-bold sm:text-4xl text-3xl">WEB DEVELOPER</h2>
+					<span class="kanit-extralight text-3xl">Full-Stack</span>
+				</div>
+				<div class="flex flex-row items-center justify-start gap-5">
+					<a href="" target="_blank">
+						<ButtonContact Content="Contact" />
+					</a>
+						<a href="https://www.linkedin.com/in/kevin-yablonkis-7253012a7/" target="_blank">
+						<ButtonLinkedin Content="Linkedin" />
 					</a>
 				</div>
+				<div></div>
 			</div>
-			<div class="flex sm:flex-row flex-col items-center justify-center sm:gap-5 gap-8 sm:p-7 py-7 px-0 rounded-2xl shadow-2xl shadow-[#030303a2] bg-[#1414145f] sm:w-[720px] w-[320px]">
-				<div class="flex flex-col items-center justify-center gap-5">
-					<SwiperImg Img1="home-dark.webp" Img2="launcher.webp" Img3="login.webp" Img4="query-info-result.webp" ImgBig="home-dark.webp" ClassUnique="" />
-				</div>
-				<div class="flex flex-col gap-3 sm:w-auto w-[300px]">
-					<h3 class="kanit-medium m-auto text-3xl">UNEFA WMS</h3>
-					<p class="px-2 text-balance">Un Sistema de Gestión de Inventario (WMS) para la universidad enfocado en la adminitración de bienes e inmuebles. Se crearon; Launcher, Login, Base de Datos y funciones de insersión en archivos Excel.</p>
-					<div class="flex flex-row items-center justify-center gap-12 my-6">
-						<UsedTechIcons color="FFDF00">
-							<img class="w-8 shadow-white drop-shadow-md" src="./assets/img/js.webp" alt="" loading="lazy">
-						</UsedTechIcons>
-						<UsedTechIcons color="8DD2F3">
-							<img class="w-14 shadow-white drop-shadow-md" src="./assets/img/sqlite.webp" alt="" loading="lazy">
-						</UsedTechIcons>
-						<UsedTechIcons color="589A43">
-							<img class="w-8 shadow-white drop-shadow-md" src="./assets/img/nodejs.webp" alt="" loading="lazy">
-						</UsedTechIcons>
+		</section>
+		<section class="flex flex-col items-center justify-center my-8 z-10" id="proyects">
+			<h2 class="kanit-extrabold text-5xl" style="text-shadow: 1px 1px 2px #57A564, 0 0 1em #57A564, 0 0 0.2em #57A564;">PROYECTS</h2>
+			<div class="flex flex-col items-center justify-center gap-20 sm:my-14 my-8">
+				<div class="flex sm:flex-row flex-col items-center justify-center sm:gap-5 gap-8 sm:p-7 py-7 px-0 rounded-2xl shadow-2xl shadow-[#030303a2] bg-[#1414145f] sm:w-[720px] w-[320px]">
+					<div class="flex flex-col items-center justify-center gap-5">
+						<SwiperImg Img1="home-dark.webp" Img2="launcher.webp" Img3="login.webp" Img4="query-info-result.webp" ImgBig="home-dark.webp" ClassUnique="" />
 					</div>
-					<a class="m-auto" href="https://github.com/kevinyablonkis/unefa-wms" target="_blank">
-						<ButtonSimple>
-							<svg width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-brand-github"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5" /></svg>
-							<span class="font-bold">
-								View code
-							</span>
-						</ButtonSimple>
-					</a>
-				</div>
-			</div>
-			<div class="flex sm:flex-row flex-col items-center justify-center sm:gap-5 gap-8 sm:p-7 py-7 px-0 rounded-2xl shadow-2xl shadow-[#030303a2] bg-[#1414145f] sm:w-[720px] w-[320px]">
-				<div class="flex flex-col items-center justify-center gap-5">
-					<SwiperImg Img1="home-dark.webp" Img2="launcher.webp" Img3="login.webp" Img4="query-info-result.webp" ImgBig="home-dark.webp" ClassUnique="" />
-				</div>
-				<div class="flex flex-col gap-3 sm:w-auto w-[300px]">
-					<h3 class="kanit-medium m-auto text-3xl">UNEFA WMS</h3>
-					<p class="px-2 text-balance">Un Sistema de Gestión de Inventario (WMS) para la universidad enfocado en la adminitración de bienes e inmuebles. Se crearon; Launcher, Login, Base de Datos y funciones de insersión en archivos Excel.</p>
-					<div class="flex flex-row items-center justify-center gap-12 my-6">
-						<UsedTechIcons color="FFDF00">
-							<img class="w-8 shadow-white drop-shadow-md" src="./assets/img/js.webp" alt="" loading="lazy">
-						</UsedTechIcons>
-						<UsedTechIcons color="8DD2F3">
-							<img class="w-14 shadow-white drop-shadow-md" src="./assets/img/sqlite.webp" alt="" loading="lazy">
-						</UsedTechIcons>
-						<UsedTechIcons color="589A43">
-							<img class="w-8 shadow-white drop-shadow-md" src="./assets/img/nodejs.webp" alt="" loading="lazy">
-						</UsedTechIcons>
+					<div class="flex flex-col gap-3 sm:w-auto w-[300px]">
+						<h3 class="kanit-medium m-auto text-3xl">UNEFA WMS</h3>
+						<p class="px-2 text-balance">Un Sistema de Gestión de Inventario (WMS) para la universidad enfocado en la adminitración de bienes e inmuebles. Se crearon; Launcher, Login, Base de Datos y funciones de insersión en archivos Excel.</p>
+						<div class="flex flex-row items-center justify-center gap-12 my-6">
+							<UsedTechIcons color="FFDF00">
+								<img class="w-8 shadow-white drop-shadow-md" src="./assets/img/js.webp" alt="" loading="lazy">
+							</UsedTechIcons>
+							<UsedTechIcons color="8DD2F3">
+								<img class="w-14 shadow-white drop-shadow-md" src="./assets/img/sqlite.webp" alt="" loading="lazy">
+							</UsedTechIcons>
+							<UsedTechIcons color="589A43">
+								<img class="w-8 shadow-white drop-shadow-md" src="./assets/img/nodejs.webp" alt="" loading="lazy">
+							</UsedTechIcons>
+						</div>
+						<a class="m-auto" href="https://github.com/kevinyablonkis/unefa-wms" target="_blank">
+							<ButtonViewCode Content="View code" />
+						</a>
 					</div>
-					<a class="m-auto" href="https://github.com/kevinyablonkis/unefa-wms" target="_blank">
-						<ButtonSimple>
-							<svg width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-brand-github"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5" /></svg>
-							<span class="font-bold">
-								View code
-							</span>
-						</ButtonSimple>
-					</a>
 				</div>
 			</div>
-			<div class="flex sm:flex-row flex-col items-center justify-center sm:gap-5 gap-8 sm:p-7 py-7 px-0 rounded-2xl shadow-2xl shadow-[#030303a2] bg-[#1414145f] sm:w-[720px] w-[320px]">
-				<div class="flex flex-col items-center justify-center gap-5">
-					<SwiperImg Img1="home-dark.webp" Img2="launcher.webp" Img3="login.webp" Img4="query-info-result.webp" ImgBig="home-dark.webp" ClassUnique="" />
+		</section>
+		<section class="modile h-screen md:hidden flex flex-row items-center justify-center mt-4 mb-10 z-10" id="skill">
+			<h2 class="kanit-extrabold sm:text-6xl text-5xl" style="text-shadow: 1px 1px 2px #3897B5, 0 0 1em #3897B5, 0 0 0.2em #3897B5;">SKILLS</h2>
+			<TechIcons XAxis="0" YAxis="245" color="D34EB6">
+				<img class="w-9 z-10" src="./assets/img/angular.webp" alt="angular.webp" loading="lazy">
+			</TechIcons>
+			<TechIcons XAxis="80" YAxis="235" color="438090">
+				<img class="w-11 z-10" src="./assets/img/reactjs.webp" alt="reactjs.webp" loading="lazy">
+			</TechIcons>
+			<TechIcons XAxis="-80" YAxis="235" color="A95C4E">
+				<img class="w-10 z-10" src="./assets/img/git.webp" alt="git.webp" loading="lazy">
+			</TechIcons>
+			<TechIcons XAxis="0" YAxis="-245" color="3178C6">
+				<img class="w-9 z-10" src="./assets/img/typescript.webp" alt="typescript.webp" loading="lazy">
+			</TechIcons>
+			<TechIcons XAxis="-80" YAxis="-235" color="1F62AE">
+				<img class="w-9 z-10" src="./assets/img/css.webp" alt="css.webp" loading="lazy">
+			</TechIcons>
+			<TechIcons XAxis="80" YAxis="-235" color="589A43">
+				<img class="w-9 z-10" src="./assets/img/nodejs.webp" alt="nodejs.webp" loading="lazy">
+			</TechIcons>
+			<TechIcons XAxis="40" YAxis="85" color="386080">
+				<img class="w-10 z-10" src="./assets/img/postgresql.webp" alt="postgresql.webp" loading="lazy">
+			</TechIcons>
+			<TechIcons XAxis="-40" YAxis="85" color="327695">
+				<img class="w-10 z-10" src="./assets/img/tailwindCSS.webp" alt="tailwindCSS.webp" loading="lazy">
+			</TechIcons>
+			<TechIcons XAxis="120" YAxis="70" color="1F62AE">
+				<img class="w-9 z-10" src="./assets/img/css.webp" alt="css.webp" loading="lazy">
+			</TechIcons>
+			<TechIcons XAxis="-120" YAxis="70" color="099CEC">
+				<img class="w-12 z-10" src="./assets/img/docker.webp" alt="docker.webp" loading="lazy">
+			</TechIcons>
+			<TechIcons XAxis="-40" YAxis="-85" color="9954B1">
+				<img class="w-10 z-10" src="./assets/img/github.webp" alt="github.webp" loading="lazy">
+			</TechIcons>
+			<TechIcons XAxis="40" YAxis="-85" color="E44D26">
+				<img class="w-9 z-10" src="./assets/img/html.webp" alt="html.webp" loading="lazy">
+			</TechIcons>
+			<TechIcons XAxis="-120" YAxis="-70" color="803E3F">
+				<img class="w-6 z-10" src="./assets/img/gulp-js.webp" alt="gulp-js.webp" loading="lazy">
+			</TechIcons>
+			<TechIcons XAxis="120" YAxis="-70" color="FFDF00">
+				<img class="w-9 z-10" src="./assets/img/js.webp" alt="js.webp" loading="lazy">
+			</TechIcons>
+			<TechIcons XAxis="50" YAxis="165" color="6D11F4">
+				<img class="w-10 z-10" src="./assets/img/bootstrap.webp" alt="bootstrap.webp" loading="lazy">
+			</TechIcons>
+			<TechIcons XAxis="-50" YAxis="165" color="bcbcbc">
+				<img class="w-9 z-10" src="./assets/img/expressjs.webp" alt="expressjs.webp" loading="lazy">
+			</TechIcons>
+			<TechIcons XAxis="140" YAxis="150" color="D34EB6">
+				<img class="w-12 z-10" src="./assets/img/astro.webp" alt="astro.webp" loading="lazy">
+			</TechIcons>
+			<TechIcons XAxis="-140" YAxis="150" color="AE957A">
+				<img class="w-11 z-10" src="./assets/img/mariadb.webp" alt="mariadb.webp" loading="lazy">
+			</TechIcons>
+			<TechIcons XAxis="-50" YAxis="-165" color="D9D9D9">
+				<img class="w-9 z-10" src="./assets/img/nextjs.webp" alt="nextjs.webp" loading="lazy">
+			</TechIcons>
+			<TechIcons XAxis="50" YAxis="-165" color="EDCCA3">
+				<img class="w-9 z-10" src="./assets/img/pug-js.webp" alt="pug-js.webp" loading="lazy">
+			</TechIcons>
+			<TechIcons XAxis="-140" YAxis="-150" color="45763D">
+				<img class="w-5 z-10" src="./assets/img/mongodb.webp" alt="mongodb.webp" loading="lazy">
+			</TechIcons>
+			<TechIcons XAxis="140" YAxis="-150" color="f4a641">
+				<img class="w-9 z-10" src="./assets/img/mysql.webp" alt="mysql.webp" loading="lazy">
+			</TechIcons>
+		</section>
+		<section class="desktop h-screen md:flex hidden flex-row items-center justify-center my-14 z-10" id="skills">
+			<h2 class="kanit-extrabold sm:text-6xl text-5xl" style="text-shadow: 1px 1px 2px #3897B5, 0 0 1em #3897B5, 0 0 0.2em #3897B5;">SKILLS</h2>
+			<TechIcons XAxis="180" YAxis="110" color="D34EB6">
+				<img class="w-9 z-10 " src="./assets/img/angular.webp" alt="angular.webp" loading="lazy">
+			</TechIcons>
+			<TechIcons XAxis="30" YAxis="135" color="438090">
+				<img class="w-11 z-10" src="./assets/img/reactjs.webp" alt="reactjs.webp" loading="lazy">
+			</TechIcons>
+			<TechIcons XAxis="-150" YAxis="130" color="A95C4E">
+				<img class="w-10 z-10" src="./assets/img/git.webp" alt="git.webp" loading="lazy">
+			</TechIcons>
+			<TechIcons XAxis="-180" YAxis="-115" color="3178C6">
+				<img class="w-9 z-10" src="./assets/img/typescript.webp" alt="typescript.webp" loading="lazy">
+			</TechIcons>
+			<TechIcons XAxis="165" YAxis="-125" color="1F62AE">
+				<img class="w-9 z-10" src="./assets/img/css.webp" alt="css.webp" loading="lazy">
+			</TechIcons>
+			<TechIcons XAxis="-260" YAxis="20" color="589A43">
+				<img class="w-9 z-10" src="./assets/img/nodejs.webp" alt="nodejs.webp" loading="lazy">
+			</TechIcons>
+			<TechIcons XAxis="0" YAxis="-140" color="386080">
+				<img class="w-10 z-10" src="./assets/img/postgresql.webp" alt="postgresql.webp" loading="lazy">
+			</TechIcons>
+			<TechIcons XAxis="260" YAxis="-10" color="327695">
+				<img class="w-10 z-10" src="./assets/img/tailwindCSS.webp" alt="tailwindCSS.webp" loading="lazy">
+			</TechIcons>
+			<TechIcons XAxis="165" YAxis="-125" color="1F62AE">
+				<img class="w-9 z-10" src="./assets/img/css.webp" alt="css.webp" loading="lazy">
+			</TechIcons>
+			<TechIcons XAxis="-350" YAxis="-180" color="099CEC">
+				<img class="w-12 z-10" src="./assets/img/docker.webp" alt="docker.webp" loading="lazy">
+			</TechIcons>
+			<TechIcons XAxis="-200" YAxis="-240" color="9954B1">
+				<img class="w-10 z-10" src="./assets/img/github.webp" alt="github.webp" loading="lazy">
+			</TechIcons>
+			<TechIcons XAxis="-30" YAxis="-260" color="E44D26">
+				<img class="w-9 z-10" src="./assets/img/html.webp" alt="html.webp" loading="lazy">
+			</TechIcons>
+			<TechIcons XAxis="160" YAxis="-250" color="803E3F">
+				<img class="w-6 z-10" src="./assets/img/gulp-js.webp" alt="gulp-js.webp" loading="lazy">
+			</TechIcons>
+			<TechIcons XAxis="320" YAxis="-170" color="FFDF00">
+				<img class="w-9 z-10" src="./assets/img/js.webp" alt="js.webp" loading="lazy">
+			</TechIcons>
+			<TechIcons XAxis="400" YAxis="130" color="6D11F4">
+				<img class="w-10 z-10" src="./assets/img/bootstrap.webp" alt="bootstrap.webp" loading="lazy">
+			</TechIcons>
+			<TechIcons XAxis="70" YAxis="260" color="bcbcbc">
+				<img class="w-9 z-10" src="./assets/img/expressjs.webp" alt="expressjs.webp" loading="lazy">
+			</TechIcons>
+			<TechIcons XAxis="265" YAxis="225" color="D34EB6">
+				<img class="w-12 z-10" src="./assets/img/astro.webp" alt="astro.webp" loading="lazy">
+			</TechIcons>
+			<TechIcons XAxis="430" YAxis="-30" color="AE957A">
+				<img class="w-11 z-10" src="./assets/img/mariadb.webp" alt="mariadb.webp" loading="lazy">
+			</TechIcons>
+			<TechIcons XAxis="-420" YAxis="100" color="D9D9D9">
+				<img class="w-9 z-10" src="./assets/img/nextjs.webp" alt="nextjs.webp" loading="lazy">
+			</TechIcons>
+			<TechIcons XAxis="-300" YAxis="210" color="EDCCA3">
+				<img class="w-9 z-10" src="./assets/img/pug-js.webp" alt="pug-js.webp" loading="lazy">
+			</TechIcons>
+			<TechIcons XAxis="-140" YAxis="260" color="45763D">
+				<img class="w-5 z-10" src="./assets/img/mongodb.webp" alt="mongodb.webp" loading="lazy">
+			</TechIcons>
+			<TechIcons XAxis="-440" YAxis="-60" color="f4a641">
+				<img class="w-9 z-10" src="./assets/img/mysql.webp" alt="mysql.webp" loading="lazy">
+			</TechIcons>
+		</section>
+		<section class="h-screen flex flex-col items-center justify-center sm:my-8 my-[140px] z-10" id="about-me">
+			<h2 class="kanit-extrabold text-5xl" style="text-shadow: 1px 1px 2px #97A158, 0 0 1em #97A158, 0 0 0.2em #97A158;">ABOUT ME</h2>
+			<div class="flex sm:flex-row flex-col sm:gap-14 gap-7 items-center justify-center sm:my-14 my-8 w-auto">
+				<div class="flex flex-col gap-3 inria-sans-regular sm:w-[300px] w-[280px]">
+					<p class="text-balance">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aliquam, tempore nobis iste rem earum exercitationem voluptatum in numquam, doloremque corrupti vero pariatur hic, accusantium perspiciatis deserunt aut consequatur atque vitae?</p>
+					<p class="text-balance">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aliquam, tempore nobis iste rem earum exercitationem voluptatum in numquam, doloremque corrupti vero pariatur hic, accusantium perspiciatis deserunt aut consequatur atque vitae?</p>
+					<p class="text-balance">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aliquam, tempore nobis iste rem earum exercitationem voluptatum in numquam, doloremque corrupti vero pariatur hic, accusantium perspiciatis deserunt aut consequatur atque vitae?</p>
 				</div>
-				<div class="flex flex-col gap-3 sm:w-auto w-[300px]">
-					<h3 class="kanit-medium m-auto text-3xl">UNEFA WMS</h3>
-					<p class="px-2 text-balance">Un Sistema de Gestión de Inventario (WMS) para la universidad enfocado en la adminitración de bienes e inmuebles. Se crearon; Launcher, Login, Base de Datos y funciones de insersión en archivos Excel.</p>
-					<div class="flex flex-row items-center justify-center gap-12 my-6">
-						<UsedTechIcons color="FFDF00">
-							<img class="w-8 shadow-white drop-shadow-md" src="./assets/img/js.webp" alt="" loading="lazy">
-						</UsedTechIcons>
-						<UsedTechIcons color="8DD2F3">
-							<img class="w-14 shadow-white drop-shadow-md" src="./assets/img/sqlite.webp" alt="" loading="lazy">
-						</UsedTechIcons>
-						<UsedTechIcons color="589A43">
-							<img class="w-8 shadow-white drop-shadow-md" src="./assets/img/nodejs.webp" alt="" loading="lazy">
-						</UsedTechIcons>
-					</div>
-					<a class="m-auto" href="https://github.com/kevinyablonkis/unefa-wms" target="_blank">
-						<ButtonSimple>
-							<svg width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-brand-github"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5" /></svg>
-							<span class="font-bold">
-								View code
-							</span>
-						</ButtonSimple>
-					</a>
-				</div>
+				<img class="rounded-3xl shadow-yellow-200 shadow-lg w-[300px]" alt=Image-foto"" src="./assets/img/foto_cv-0.webp" loading="lazy">
 			</div>
-		</div>
-	</section>
-	<section class="modile h-screen md:hidden flex flex-row items-center justify-center mt-4 mb-10 z-10" id="skill">
-		<h2 class="kanit-extrabold sm:text-6xl text-5xl" style="text-shadow: 1px 1px 2px #3897B5, 0 0 1em #3897B5, 0 0 0.2em #3897B5;">SKILLS</h2>
-		<TechIcons XAxis="0" YAxis="245" color="D34EB6">
-			<img class="w-9 z-10" src="./assets/img/angular.webp" alt="angular.webp" loading="lazy">
-		</TechIcons>
-		<TechIcons XAxis="80" YAxis="235" color="438090">
-			<img class="w-11 z-10" src="./assets/img/reactjs.webp" alt="reactjs.webp" loading="lazy">
-		</TechIcons>
-		<TechIcons XAxis="-80" YAxis="235" color="A95C4E">
-			<img class="w-10 z-10" src="./assets/img/git.webp" alt="git.webp" loading="lazy">
-		</TechIcons>
-		<TechIcons XAxis="0" YAxis="-245" color="3178C6">
-			<img class="w-9 z-10" src="./assets/img/typescript.webp" alt="typescript.webp" loading="lazy">
-		</TechIcons>
-		<TechIcons XAxis="-80" YAxis="-235" color="1F62AE">
-			<img class="w-9 z-10" src="./assets/img/css.webp" alt="css.webp" loading="lazy">
-		</TechIcons>
-		<TechIcons XAxis="80" YAxis="-235" color="589A43">
-			<img class="w-9 z-10" src="./assets/img/nodejs.webp" alt="nodejs.webp" loading="lazy">
-		</TechIcons>
-		<TechIcons XAxis="40" YAxis="85" color="386080">
-			<img class="w-10 z-10" src="./assets/img/postgresql.webp" alt="postgresql.webp" loading="lazy">
-		</TechIcons>
-		<TechIcons XAxis="-40" YAxis="85" color="327695">
-			<img class="w-10 z-10" src="./assets/img/tailwindCSS.webp" alt="tailwindCSS.webp" loading="lazy">
-		</TechIcons>
-		<TechIcons XAxis="120" YAxis="70" color="1F62AE">
-			<img class="w-9 z-10" src="./assets/img/css.webp" alt="css.webp" loading="lazy">
-		</TechIcons>
-		<TechIcons XAxis="-120" YAxis="70" color="099CEC">
-			<img class="w-12 z-10" src="./assets/img/docker.webp" alt="docker.webp" loading="lazy">
-		</TechIcons>
-		<TechIcons XAxis="-40" YAxis="-85" color="9954B1">
-			<img class="w-10 z-10" src="./assets/img/github.webp" alt="github.webp" loading="lazy">
-		</TechIcons>
-		<TechIcons XAxis="40" YAxis="-85" color="E44D26">
-			<img class="w-9 z-10" src="./assets/img/html.webp" alt="html.webp" loading="lazy">
-		</TechIcons>
-		<TechIcons XAxis="-120" YAxis="-70" color="803E3F">
-			<img class="w-6 z-10" src="./assets/img/gulp-js.webp" alt="gulp-js.webp" loading="lazy">
-		</TechIcons>
-		<TechIcons XAxis="120" YAxis="-70" color="FFDF00">
-			<img class="w-9 z-10" src="./assets/img/js.webp" alt="js.webp" loading="lazy">
-		</TechIcons>
-		<TechIcons XAxis="50" YAxis="165" color="6D11F4">
-			<img class="w-10 z-10" src="./assets/img/bootstrap.webp" alt="bootstrap.webp" loading="lazy">
-		</TechIcons>
-		<TechIcons XAxis="-50" YAxis="165" color="bcbcbc">
-			<img class="w-9 z-10" src="./assets/img/expressjs.webp" alt="expressjs.webp" loading="lazy">
-		</TechIcons>
-		<TechIcons XAxis="140" YAxis="150" color="D34EB6">
-			<img class="w-12 z-10" src="./assets/img/astro.webp" alt="astro.webp" loading="lazy">
-		</TechIcons>
-		<TechIcons XAxis="-140" YAxis="150" color="AE957A">
-			<img class="w-11 z-10" src="./assets/img/mariadb.webp" alt="mariadb.webp" loading="lazy">
-		</TechIcons>
-		<TechIcons XAxis="-50" YAxis="-165" color="D9D9D9">
-			<img class="w-9 z-10" src="./assets/img/nextjs.webp" alt="nextjs.webp" loading="lazy">
-		</TechIcons>
-		<TechIcons XAxis="50" YAxis="-165" color="EDCCA3">
-			<img class="w-9 z-10" src="./assets/img/pug-js.webp" alt="pug-js.webp" loading="lazy">
-		</TechIcons>
-		<TechIcons XAxis="-140" YAxis="-150" color="45763D">
-			<img class="w-5 z-10" src="./assets/img/mongodb.webp" alt="mongodb.webp" loading="lazy">
-		</TechIcons>
-		<TechIcons XAxis="140" YAxis="-150" color="f4a641">
-			<img class="w-9 z-10" src="./assets/img/mysql.webp" alt="mysql.webp" loading="lazy">
-		</TechIcons>
-	</section>
-	<section class="desktop h-screen md:flex hidden flex-row items-center justify-center my-14 z-10" id="skills">
-		<h2 class="kanit-extrabold sm:text-6xl text-5xl" style="text-shadow: 1px 1px 2px #3897B5, 0 0 1em #3897B5, 0 0 0.2em #3897B5;">SKILLS</h2>
-		<TechIcons XAxis="180" YAxis="110" color="D34EB6">
-			<img class="w-9 z-10 " src="./assets/img/angular.webp" alt="angular.webp" loading="lazy">
-		</TechIcons>
-		<TechIcons XAxis="30" YAxis="135" color="438090">
-			<img class="w-11 z-10" src="./assets/img/reactjs.webp" alt="reactjs.webp" loading="lazy">
-		</TechIcons>
-		<TechIcons XAxis="-150" YAxis="130" color="A95C4E">
-			<img class="w-10 z-10" src="./assets/img/git.webp" alt="git.webp" loading="lazy">
-		</TechIcons>
-		<TechIcons XAxis="-180" YAxis="-115" color="3178C6">
-			<img class="w-9 z-10" src="./assets/img/typescript.webp" alt="typescript.webp" loading="lazy">
-		</TechIcons>
-		<TechIcons XAxis="165" YAxis="-125" color="1F62AE">
-			<img class="w-9 z-10" src="./assets/img/css.webp" alt="css.webp" loading="lazy">
-		</TechIcons>
-		<TechIcons XAxis="-260" YAxis="20" color="589A43">
-			<img class="w-9 z-10" src="./assets/img/nodejs.webp" alt="nodejs.webp" loading="lazy">
-		</TechIcons>
-		<TechIcons XAxis="0" YAxis="-140" color="386080">
-			<img class="w-10 z-10" src="./assets/img/postgresql.webp" alt="postgresql.webp" loading="lazy">
-		</TechIcons>
-		<TechIcons XAxis="260" YAxis="-10" color="327695">
-			<img class="w-10 z-10" src="./assets/img/tailwindCSS.webp" alt="tailwindCSS.webp" loading="lazy">
-		</TechIcons>
-		<TechIcons XAxis="165" YAxis="-125" color="1F62AE">
-			<img class="w-9 z-10" src="./assets/img/css.webp" alt="css.webp" loading="lazy">
-		</TechIcons>
-		<TechIcons XAxis="-350" YAxis="-180" color="099CEC">
-			<img class="w-12 z-10" src="./assets/img/docker.webp" alt="docker.webp" loading="lazy">
-		</TechIcons>
-		<TechIcons XAxis="-200" YAxis="-240" color="9954B1">
-			<img class="w-10 z-10" src="./assets/img/github.webp" alt="github.webp" loading="lazy">
-		</TechIcons>
-		<TechIcons XAxis="-30" YAxis="-260" color="E44D26">
-			<img class="w-9 z-10" src="./assets/img/html.webp" alt="html.webp" loading="lazy">
-		</TechIcons>
-		<TechIcons XAxis="160" YAxis="-250" color="803E3F">
-			<img class="w-6 z-10" src="./assets/img/gulp-js.webp" alt="gulp-js.webp" loading="lazy">
-		</TechIcons>
-		<TechIcons XAxis="320" YAxis="-170" color="FFDF00">
-			<img class="w-9 z-10" src="./assets/img/js.webp" alt="js.webp" loading="lazy">
-		</TechIcons>
-		<TechIcons XAxis="400" YAxis="130" color="6D11F4">
-			<img class="w-10 z-10" src="./assets/img/bootstrap.webp" alt="bootstrap.webp" loading="lazy">
-		</TechIcons>
-		<TechIcons XAxis="70" YAxis="260" color="bcbcbc">
-			<img class="w-9 z-10" src="./assets/img/expressjs.webp" alt="expressjs.webp" loading="lazy">
-		</TechIcons>
-		<TechIcons XAxis="265" YAxis="225" color="D34EB6">
-			<img class="w-12 z-10" src="./assets/img/astro.webp" alt="astro.webp" loading="lazy">
-		</TechIcons>
-		<TechIcons XAxis="430" YAxis="-30" color="AE957A">
-			<img class="w-11 z-10" src="./assets/img/mariadb.webp" alt="mariadb.webp" loading="lazy">
-		</TechIcons>
-		<TechIcons XAxis="-420" YAxis="100" color="D9D9D9">
-			<img class="w-9 z-10" src="./assets/img/nextjs.webp" alt="nextjs.webp" loading="lazy">
-		</TechIcons>
-		<TechIcons XAxis="-300" YAxis="210" color="EDCCA3">
-			<img class="w-9 z-10" src="./assets/img/pug-js.webp" alt="pug-js.webp" loading="lazy">
-		</TechIcons>
-		<TechIcons XAxis="-140" YAxis="260" color="45763D">
-			<img class="w-5 z-10" src="./assets/img/mongodb.webp" alt="mongodb.webp" loading="lazy">
-		</TechIcons>
-		<TechIcons XAxis="-440" YAxis="-60" color="f4a641">
-			<img class="w-9 z-10" src="./assets/img/mysql.webp" alt="mysql.webp" loading="lazy">
-		</TechIcons>
-	</section>
-	<section class="h-screen flex flex-col items-center justify-center sm:my-8 my-[140px] z-10" id="about-me">
-		<h2 class="kanit-extrabold text-5xl" style="text-shadow: 1px 1px 2px #97A158, 0 0 1em #97A158, 0 0 0.2em #97A158;">ABOUT ME</h2>
-		<div class="flex sm:flex-row flex-col sm:gap-14 gap-7 items-center justify-center sm:my-14 my-8 w-auto">
-			<div class="flex flex-col gap-3 inria-sans-regular sm:w-[300px] w-[280px]">
-				<p class="text-balance">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aliquam, tempore nobis iste rem earum exercitationem voluptatum in numquam, doloremque corrupti vero pariatur hic, accusantium perspiciatis deserunt aut consequatur atque vitae?</p>
-				<p class="text-balance">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aliquam, tempore nobis iste rem earum exercitationem voluptatum in numquam, doloremque corrupti vero pariatur hic, accusantium perspiciatis deserunt aut consequatur atque vitae?</p>
-				<p class="text-balance">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aliquam, tempore nobis iste rem earum exercitationem voluptatum in numquam, doloremque corrupti vero pariatur hic, accusantium perspiciatis deserunt aut consequatur atque vitae?</p>
-			</div>
-			<img class="rounded-3xl shadow-yellow-200 shadow-lg" style="width: 300px;" alt=Image-foto"" src="./assets/img/foto_cv-0.webp" loading="lazy">
-		</div>
-	</section>
+		</section>
+        <ButtonScrollTop />
+      </main>
+      <Footer Content="Made by" />
 </Layout>
