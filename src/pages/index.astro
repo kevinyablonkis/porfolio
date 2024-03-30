@@ -48,18 +48,13 @@ import SwiperImg from '../components/SwiperImg.astro';
 	<section class="flex flex-col items-center justify-center my-8 z-10" id="proyects">
 		<h2 class="kanit-extrabold text-5xl" style="text-shadow: 1px 1px 2px #57A564, 0 0 1em #57A564, 0 0 0.2em #57A564;">PROYECTS</h2>
 		<div class="flex flex-col items-center justify-center gap-20 sm:my-14 my-8">
-			<div class="flex sm:flex-row flex-col items-center justify-center sm:gap-5 gap-8 sm:p-7 py-7 px-0 rounded-2xl shadow-2xl shadow-[#030303a2] bg-[#1414145f] sm:w-[700px] w-[320px]">
+			<div class="flex sm:flex-row flex-col items-center justify-center sm:gap-5 gap-8 sm:p-7 py-7 px-0 rounded-2xl shadow-2xl shadow-[#030303a2] bg-[#1414145f] sm:w-[720px] w-[320px]">
 				<div class="flex flex-col items-center justify-center gap-5">
-					<div>
-						<img src="./assets/img/home-dark.webp" class="imagen2 rounded-xl bg-slate-600 sm:w-auto w-[250px] sm:h-[200px] h-[150px]"/>
-					</div>
-					<div class="flex items-center justify-center shadow-md shadow-[#03030394] bg-transparent rounded-2xl px-2 sm:w-auto">
-						<SwiperImg Img1="home-dark.webp" Img2="launcher.webp" Img3="login.webp" Img4="query-info-result.webp" />
-					</div>
+					<SwiperImg Img1="home-dark.webp" Img2="launcher.webp" Img3="login.webp" Img4="query-info-result.webp" ImgBig="home-dark.webp" ClassUnique="" />
 				</div>
 				<div class="flex flex-col gap-3 sm:w-auto w-[300px]">
 					<h3 class="kanit-medium m-auto text-3xl">UNEFA WMS</h3>
-					<p class="px-2 text-balance">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Exercitationem, expedita praesentium sapiente consequuntur placeat dignissimos facere necessitatibus eos ipsum voluptates, accusamus commodi animi, deserunt veritatis. Voluptas debitis saepe modi? Rerum.</p>
+					<p class="px-2 text-balance">Un Sistema de Gestión de Inventario (WMS) para la universidad enfocado en la adminitración de bienes e inmuebles. Se crearon; Launcher, Login, Base de Datos y funciones de insersión en archivos Excel.</p>
 					<div class="flex flex-row items-center justify-center gap-12 my-6">
 						<UsedTechIcons color="FFDF00">
 							<img class="w-8 shadow-white drop-shadow-md" src="./assets/img/js.webp" alt="" loading="lazy">
@@ -81,16 +76,69 @@ import SwiperImg from '../components/SwiperImg.astro';
 					</a>
 				</div>
 			</div>
-			<div class="flex sm:flex-row flex-col items-center justify-center sm:gap-5 gap-8 sm:p-7 py-7 px-0 rounded-2xl shadow-2xl shadow-[#030303a2] bg-[#1414145f] sm:w-[700px] w-[320px]">
+			<div class="flex sm:flex-row flex-col items-center justify-center sm:gap-5 gap-8 sm:p-7 py-7 px-0 rounded-2xl shadow-2xl shadow-[#030303a2] bg-[#1414145f] sm:w-[720px] w-[320px]">
 				<div class="flex flex-col items-center justify-center gap-5">
-					<img src="./assets/img/home-dark.webp" class="imagen2 rounded-xl bg-slate-600 sm:w-auto w-[250px] sm:h-[200px] h-[150px]"/>
-					<div class="flex items-center justify-center shadow-md shadow-[#03030394] bg-transparent rounded-2xl px-2 sm:w-auto">
-						<SwiperImg Img1="home-dark.webp" Img2="launcher.webp" Img3="login.webp" Img4="query-info-result.webp" />
-					</div>
+					<SwiperImg Img1="home-dark.webp" Img2="launcher.webp" Img3="login.webp" Img4="query-info-result.webp" ImgBig="home-dark.webp" ClassUnique="" />
 				</div>
 				<div class="flex flex-col gap-3 sm:w-auto w-[300px]">
 					<h3 class="kanit-medium m-auto text-3xl">UNEFA WMS</h3>
-					<p class="px-2 text-balance">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Exercitationem, expedita praesentium sapiente consequuntur placeat dignissimos facere necessitatibus eos ipsum voluptates, accusamus commodi animi, deserunt veritatis. Voluptas debitis saepe modi? Rerum.</p>
+					<p class="px-2 text-balance">Un Sistema de Gestión de Inventario (WMS) para la universidad enfocado en la adminitración de bienes e inmuebles. Se crearon; Launcher, Login, Base de Datos y funciones de insersión en archivos Excel.</p>
+					<div class="flex flex-row items-center justify-center gap-12 my-6">
+						<UsedTechIcons color="FFDF00">
+							<img class="w-8 shadow-white drop-shadow-md" src="./assets/img/js.webp" alt="" loading="lazy">
+						</UsedTechIcons>
+						<UsedTechIcons color="8DD2F3">
+							<img class="w-14 shadow-white drop-shadow-md" src="./assets/img/sqlite.webp" alt="" loading="lazy">
+						</UsedTechIcons>
+						<UsedTechIcons color="589A43">
+							<img class="w-8 shadow-white drop-shadow-md" src="./assets/img/nodejs.webp" alt="" loading="lazy">
+						</UsedTechIcons>
+					</div>
+					<a class="m-auto" href="https://github.com/kevinyablonkis/unefa-wms" target="_blank">
+						<ButtonSimple>
+							<svg width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-brand-github"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5" /></svg>
+							<span class="font-bold">
+								View code
+							</span>
+						</ButtonSimple>
+					</a>
+				</div>
+			</div>
+			<div class="flex sm:flex-row flex-col items-center justify-center sm:gap-5 gap-8 sm:p-7 py-7 px-0 rounded-2xl shadow-2xl shadow-[#030303a2] bg-[#1414145f] sm:w-[720px] w-[320px]">
+				<div class="flex flex-col items-center justify-center gap-5">
+					<SwiperImg Img1="home-dark.webp" Img2="launcher.webp" Img3="login.webp" Img4="query-info-result.webp" ImgBig="home-dark.webp" ClassUnique="" />
+				</div>
+				<div class="flex flex-col gap-3 sm:w-auto w-[300px]">
+					<h3 class="kanit-medium m-auto text-3xl">UNEFA WMS</h3>
+					<p class="px-2 text-balance">Un Sistema de Gestión de Inventario (WMS) para la universidad enfocado en la adminitración de bienes e inmuebles. Se crearon; Launcher, Login, Base de Datos y funciones de insersión en archivos Excel.</p>
+					<div class="flex flex-row items-center justify-center gap-12 my-6">
+						<UsedTechIcons color="FFDF00">
+							<img class="w-8 shadow-white drop-shadow-md" src="./assets/img/js.webp" alt="" loading="lazy">
+						</UsedTechIcons>
+						<UsedTechIcons color="8DD2F3">
+							<img class="w-14 shadow-white drop-shadow-md" src="./assets/img/sqlite.webp" alt="" loading="lazy">
+						</UsedTechIcons>
+						<UsedTechIcons color="589A43">
+							<img class="w-8 shadow-white drop-shadow-md" src="./assets/img/nodejs.webp" alt="" loading="lazy">
+						</UsedTechIcons>
+					</div>
+					<a class="m-auto" href="https://github.com/kevinyablonkis/unefa-wms" target="_blank">
+						<ButtonSimple>
+							<svg width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-brand-github"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5" /></svg>
+							<span class="font-bold">
+								View code
+							</span>
+						</ButtonSimple>
+					</a>
+				</div>
+			</div>
+			<div class="flex sm:flex-row flex-col items-center justify-center sm:gap-5 gap-8 sm:p-7 py-7 px-0 rounded-2xl shadow-2xl shadow-[#030303a2] bg-[#1414145f] sm:w-[720px] w-[320px]">
+				<div class="flex flex-col items-center justify-center gap-5">
+					<SwiperImg Img1="home-dark.webp" Img2="launcher.webp" Img3="login.webp" Img4="query-info-result.webp" ImgBig="home-dark.webp" ClassUnique="" />
+				</div>
+				<div class="flex flex-col gap-3 sm:w-auto w-[300px]">
+					<h3 class="kanit-medium m-auto text-3xl">UNEFA WMS</h3>
+					<p class="px-2 text-balance">Un Sistema de Gestión de Inventario (WMS) para la universidad enfocado en la adminitración de bienes e inmuebles. Se crearon; Launcher, Login, Base de Datos y funciones de insersión en archivos Excel.</p>
 					<div class="flex flex-row items-center justify-center gap-12 my-6">
 						<UsedTechIcons color="FFDF00">
 							<img class="w-8 shadow-white drop-shadow-md" src="./assets/img/js.webp" alt="" loading="lazy">
