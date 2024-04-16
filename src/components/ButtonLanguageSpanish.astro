@@ -13,10 +13,10 @@ const { Content, FisrtOption, SecondOption  } = Astro.props;
     <div id="dropdown" class="z-10 hidden bg-[#14141497] border-2 rounded-lg shadow w-28 overflow-hidden">
         <ul class="text-sm" aria-labelledby="dropdownDefaultButton">
           <li>
-            <a href="/es" class="inria-sans-bold text-white hover:bg-[#141414ae] block px-4 py-2">{FisrtOption}</a>
+            <a href="/es" rel="noopener noreferrer" role="link" class="inria-sans-bold text-white hover:bg-[#141414ae] block px-4 py-2">{FisrtOption}</a>
           </li>
           <li>
-            <a href="/" class="inria-sans-bold text-white hover:bg-[#141414ae] block px-4 py-2">{SecondOption}</a>
+            <a href="/" rel="noopener noreferrer" role="link" class="inria-sans-bold text-white hover:bg-[#141414ae] block px-4 py-2">{SecondOption}</a>
           </li>
         </ul>
     </div>
