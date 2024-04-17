@@ -1,4 +1,5 @@
 ---
+import SpeedInsights from '@vercel/speed-insights/astro';
 interface Props {
 	title: string;
 }
@@ -11,6 +12,7 @@ const { title } = Astro.props;
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="description" content="his is a small web page for you to see my skills and experiences. Here you can see the technologies that I usually use, and the projects where I have implemented them." />
+    <SpeedInsights />
 		<meta name="viewport" content="width=device-width" />
 		<link rel="icon" type="image/svg+xml" href="./assets/icons/code.svg" />
 		<meta name="generator" content={title} />
