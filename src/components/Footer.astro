@@ -11,13 +11,13 @@ const { Content, contentAriaLabel } = Astro.props;
     <span class="inria-sans-bold">2024<span class="inria-sans-light">. {Content} </span>Kevin Yablonkis.</span>
     <div class="flex flex-row gap-5">
         <a href="https://www.instagram.com/kevinyablonkis/" aria-label=`${contentAriaLabel} Instagram` rel="noopener noreferrer" role="link" target="_blank">
-            <ButtonInstagramSimple />
+            <ButtonInstagramSimple contentAriaL=`${contentAriaLabel}` />
         </a>
         <a href="https://www.linkedin.com/in/kevin-yablonkis-7253012a7/" aria-label=`${contentAriaLabel} Linkedin` rel="noopener noreferrer" role="link" target="_blank">
-            <ButtonLinkedinSimple />
+            <ButtonLinkedinSimple contentAriaL=`${contentAriaLabel}` />
         </a>
         <a href="https://github.com/kevinyablonkis" aria-label=`${contentAriaLabel} GitHub` rel="noopener noreferrer" role="link" target="_blank">
-            <ButtonGithubSimple />
+            <ButtonGithubSimple contentAriaL=`${contentAriaLabel}` />
         </a>
     </div>
 </footer>
