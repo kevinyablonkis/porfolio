@@ -3,20 +3,20 @@ import ButtonInstagramSimple from './ButtonInstagramSimple.astro'
 import ButtonLinkedinSimple from './ButtonLinkedinSimple.astro'
 import ButtonGithubSimple from './ButtonGithubSimple.astro'
 
-const { Content } = Astro.props;
+const { Content, contentAriaLabel } = Astro.props;
 
 ---
 
 <footer class="flex sm:flex-row flex-col-reverse items-center justify-between p-5 gap-5 sm:mt-0 mt-10 sm:mb-0 sm:ml-[220px] ml-5 sm:mr-[220px] mr-5 z-20">
     <span class="inria-sans-bold">2024<span class="inria-sans-light">. {Content} </span>Kevin Yablonkis.</span>
     <div class="flex flex-row gap-5">
-        <a href="https://www.instagram.com/kevinyablonkis/" rel="noopener noreferrer" role="link" target="_blank">
+        <a href="https://www.instagram.com/kevinyablonkis/" aria-label=`${contentAriaLabel} Instagram` rel="noopener noreferrer" role="link" target="_blank">
             <ButtonInstagramSimple />
         </a>
-        <a href="https://www.linkedin.com/in/kevin-yablonkis-7253012a7/" rel="noopener noreferrer" role="link" target="_blank">
+        <a href="https://www.linkedin.com/in/kevin-yablonkis-7253012a7/" aria-label=`${contentAriaLabel} Linkedin` rel="noopener noreferrer" role="link" target="_blank">
             <ButtonLinkedinSimple />
         </a>
-        <a href="https://github.com/kevinyablonkis" rel="noopener noreferrer" role="link" target="_blank">
+        <a href="https://github.com/kevinyablonkis" aria-label=`${contentAriaLabel} GitHub` rel="noopener noreferrer" role="link" target="_blank">
             <ButtonGithubSimple />
         </a>
     </div>
