@@ -11,7 +11,7 @@ import ButtonContact from '../components/ButtonContact.astro';
 import ButtonLinkedin from '../components/ButtonLinkedin.astro';
 ---
 
-<Layout title="Kevin Yablonkis - Portfolio">
+<Layout htmlTitle="Kevin Yablonkis - Portfolio" htmlLang="en" htmlDescription="A personal portfolio to highlight my technical abilities and project work.">
 	<Header Link1="Proyects" Link2="Skills" Link3="About Me" TitleLanguage="Language" , Language1="Spanish" Language2="English" />
       <div class="fixed top-0 bottom-0 left-0 right-0 translate-x-[-50%] translate-y-[-50%] size-[500px] bg-[#3A1BB8] z-[0] blur-[150px]"></div>
       <div class="fixed bottom-60 right-16 size-20 bg-[#644399] z-[0] blur-[45px]"></div>
@@ -248,7 +248,7 @@ import ButtonLinkedin from '../components/ButtonLinkedin.astro';
 				<img class="rounded-3xl shadow-yellow-200 shadow-lg w-[300px]" alt="kevin-2.webp" src="./assets/img/kevin-2.webp" loading="lazy">
 			</div>
 		</section>
-        <ButtonScrollTop />
+        <ButtonScrollTop contentAriaLabel="Scroll up" />
       </main>
       <Footer Content="Made by" contentAriaLabel="Got to" />
 </Layout>

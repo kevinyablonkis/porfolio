@@ -1,21 +1,23 @@
 ---
 import SpeedInsights from '@vercel/speed-insights/astro';
 interface Props {
-	title: string;
+	htmlTitle: string;
+  htmlLang: string;
+  htmlDescription: string;
 }
 
-const { title } = Astro.props;
+const { htmlTitle, htmlLang, htmlDescription  } = Astro.props;
 ---
 
 <!doctype html>
-<html lang="en/es">
+<html lang=`${htmlLang}`>
 	<head>
 		<meta charset="UTF-8" />
-		<meta name="description" content="his is a small web page for you to see my skills and experiences. Here you can see the technologies that I usually use, and the projects where I have implemented them." />
+		<meta name="description" content=`${htmlDescription}` />
     <SpeedInsights />
 		<meta name="viewport" content="width=device-width" />
 		<link rel="icon" type="image/svg+xml" href="./assets/icons/code.svg" />
-		<meta name="generator" content={title} />
+		<meta name="generator" content={htmlTitle} />
 		<!-- FONT KANIT -->
 		<link rel="preconnect" href="https://fonts.googleapis.com">
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -24,7 +26,7 @@ const { title } = Astro.props;
 		<link rel="preconnect" href="https://fonts.googleapis.com">
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 		<link href="https://fonts.googleapis.com/css2?family=Inria+Sans:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap" rel="stylesheet">
-		<title>{title}</title>
+		<title>{htmlTitle}</title>
 	</head>
 	<body class="relative">
       <slot />
