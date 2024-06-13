@@ -1,140 +1,152 @@
 ---
-import SpeedInsights from '@vercel/speed-insights/astro';
+import SpeedInsights from "@vercel/speed-insights/astro";
 interface Props {
-	htmlTitle: string;
+  htmlTitle: string;
   htmlLang: string;
   htmlDescription: string;
 }
 
-const { htmlTitle, htmlLang, htmlDescription  } = Astro.props;
+const { htmlTitle, htmlLang, htmlDescription } = Astro.props;
 ---
 
 <!doctype html>
 <html lang=`${htmlLang}`>
-	<head>
-		<meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0">
-		<meta name="description" content=`${htmlDescription}` />
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=1.0"
+    />
+    <meta name="description" content=`${htmlDescription}` />
     <SpeedInsights />
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="./assets/icons/code.svg" />
-		<meta name="generator" content={htmlTitle} />
-    <meta name="view-transition" content="same-origin" >
-		<!-- FONT KANIT -->
-		<link rel="preconnect" href="https://fonts.googleapis.com">
-		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-		<link href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-		<!-- FONT INRIA SANS -->
-		<link rel="preconnect" href="https://fonts.googleapis.com">
-		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-		<link href="https://fonts.googleapis.com/css2?family=Inria+Sans:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap" rel="stylesheet">
-		<title>{htmlTitle}</title>
-	</head>
-	<body class="relative">
-      <slot />
-	</body>
-</html>
-<style is:global>
-	:root {
-		font-family: sans-serif;
-		color-scheme: dark;
-    scrollbar-width: none;
-	}
-
-  html {
-    scroll-behavior: smooth;
-  }
-
-  @media (prefers-reduced-motion: reduce) {
-    html {
-      scroll-behavior: auto;
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="./assets/icons/code.svg" />
+    <meta name="generator" content={htmlTitle} />
+    <meta name="view-transition" content="same-origin" />
+    <!-- FONT KANIT -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- FONT INRIA SANS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inria+Sans:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap"
+      rel="stylesheet"
+    />
+    <title>{htmlTitle}</title>
+  </head>
+  <body class="relative">
+    <slot />
+  </body><style is:global>
+    :root {
+      font-family: sans-serif;
+      color-scheme: dark;
+      scrollbar-width: none;
     }
-  }
 
-  .kanit-extralight {
-    font-family: "Kanit", sans-serif;
-    font-weight: 200;
-    font-style: normal;
-  }
+    html {
+      scroll-behavior: smooth;
+    }
 
-  .kanit-light {
-    font-family: "Kanit", sans-serif;
-    font-weight: 300;
-    font-style: normal;
-  }
+    @media (prefers-reduced-motion: reduce) {
+      html {
+        scroll-behavior: auto;
+      }
+    }
 
-  .kanit-medium {
-    font-family: "Kanit", sans-serif;
-    font-weight: 500;
-    font-style: normal;
-  }
+    .kanit-extralight {
+      font-family: "Kanit", sans-serif;
+      font-weight: 200;
+      font-style: normal;
+    }
 
-  .kanit-bold {
-    font-family: "Kanit", sans-serif;
-    font-weight: 700;
-    font-style: normal;
-  }
+    .kanit-light {
+      font-family: "Kanit", sans-serif;
+      font-weight: 300;
+      font-style: normal;
+    }
 
-  .kanit-extrabold {
-    font-family: "Kanit", sans-serif;
-    font-weight: 800;
-    font-style: normal;
-  }
+    .kanit-medium {
+      font-family: "Kanit", sans-serif;
+      font-weight: 500;
+      font-style: normal;
+    }
 
-  .inria-sans-regular {
-    font-family: "Inria Sans", sans-serif;
-    font-weight: 400;
-    font-style: normal;
-  }
+    .kanit-bold {
+      font-family: "Kanit", sans-serif;
+      font-weight: 700;
+      font-style: normal;
+    }
 
-  .inria-sans-bold {
-    font-family: "Inria Sans", sans-serif;
-    font-weight: 700;
-    font-style: normal;
-  }
+    .kanit-extrabold {
+      font-family: "Kanit", sans-serif;
+      font-weight: 800;
+      font-style: normal;
+    }
 
-  .animation {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding: 5px;
-    background-color: transparent;
-    border-radius: 1000px;
-    overflow: hidden;
-  }
+    .inria-sans-regular {
+      font-family: "Inria Sans", sans-serif;
+      font-weight: 400;
+      font-style: normal;
+    }
 
-  .animation__img {
-    width: 200px;
-    border-radius: 100px;
-    z-index: 1;
-  }
+    .inria-sans-bold {
+      font-family: "Inria Sans", sans-serif;
+      font-weight: 700;
+      font-style: normal;
+    }
 
-  .spinner {
-  position: absolute;
-  background-image: linear-gradient(rgb(186, 66, 255) 35%,rgb(0, 225, 255));
-  width: 220px;
-  height: 220px;
-  animation: spinning82341 2.5s linear infinite;
-  text-align: center;
-  border-radius: 1000px;
-  filter: blur(1px);
-  box-shadow: 0px -5px 20px 0px rgb(186, 66, 255), 0px 5px 20px 0px rgb(0, 225, 255);
-}
+    .animation {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 5px;
+      background-color: transparent;
+      border-radius: 1000px;
+      overflow: hidden;
+    }
 
-.spinner1 {
-  background-color: rgb(36, 36, 36);
-  width: 220px;
-  height: 220px;
-  border-radius: 1000px;
-  filter: blur(10px);
-}
+    .animation__img {
+      width: 200px;
+      border-radius: 100px;
+      z-index: 1;
+    }
 
-@keyframes spinning82341 {
-  to {
-    transform: rotate(360deg);
-  }
-}
+    .spinner {
+      position: absolute;
+      background-image: linear-gradient(
+        rgb(186, 66, 255) 35%,
+        rgb(0, 225, 255)
+      );
+      width: 220px;
+      height: 220px;
+      animation: spinning82341 2.5s linear infinite;
+      text-align: center;
+      border-radius: 1000px;
+      filter: blur(1px);
+      box-shadow:
+        0px -5px 20px 0px rgb(186, 66, 255),
+        0px 5px 20px 0px rgb(0, 225, 255);
+    }
 
-</style>
+    .spinner1 {
+      background-color: rgb(36, 36, 36);
+      width: 220px;
+      height: 220px;
+      border-radius: 1000px;
+      filter: blur(10px);
+    }
+
+    @keyframes spinning82341 {
+      to {
+        transform: rotate(360deg);
+      }
+    }
+  </style>
+</html>

@@ -1,33 +1,49 @@
 ---
-import ButtonLanguageSpanish from './ButtonLanguageSpanish.astro'
+import ButtonLanguageSpanish from "./ButtonLanguageSpanish.astro";
 
-const { Link1, Link2, Link3, TitleLanguage , Language1, Language2 } = Astro.props;
-
+const { Link1, Link2, Link3, TitleLanguage, Language1, Language2 } =
+  Astro.props;
 ---
 
 <header class="fixed top-0 left-0 flex flex-row px-2 py-2 z-20">
-    <div class="relative px-3 py-4 overflow-hidden rounded-md sm:pr-[150px] pr-[80px]">
-        <nav class="flex flex-row items-center sm:justify-center justify-between gap-5 z-20">
-            <ul class="flex flex-row sm:gap-5 gap-3 sm:text-base text-[17px]">
-                <li class="inria-sans-bold z-20"><a href="#proyects">{Link1}</a></li>
-                <li class="inria-sans-bold z-20 cursor-pointer"><a id="linkToSkills">{Link2}</a></li>
-                <li class="inria-sans-bold z-20"><a href="#about-me">{Link3}</a></li>
-            </ul>
-        </nav>
-        <div class="absolute top-0 left-0 right-0 bottom-0 overflow-hidden blur-2xl rounded-sm bg-[#000000ce] z-0"></div>
+  <div
+    class="relative px-3 py-4 overflow-hidden rounded-md sm:pr-[150px] pr-[80px]"
+  >
+    <nav
+      class="flex flex-row items-center sm:justify-center justify-between gap-5 z-20"
+    >
+      <ul class="flex flex-row sm:gap-5 gap-3 sm:text-base text-[17px]">
+        <li class="inria-sans-bold z-20"><a href="#proyects">{Link1}</a></li>
+        <li class="inria-sans-bold z-20 cursor-pointer">
+          <a id="linkToSkills">{Link2}</a>
+        </li>
+        <li class="inria-sans-bold z-20"><a href="#about-me">{Link3}</a></li>
+      </ul>
+    </nav>
+    <div
+      class="absolute top-0 left-0 right-0 bottom-0 overflow-hidden blur-2xl rounded-sm bg-[#000000ce] z-0"
+    >
     </div>
-    <ButtonLanguageSpanish Content={TitleLanguage} FisrtOption={Language1} SecondOption={Language2} />
+  </div>
+  <ButtonLanguageSpanish
+    Content={TitleLanguage}
+    FisrtOption={Language1}
+    SecondOption={Language2}
+  />
 </header>
 
 <script>
-    const linkToSkills: HTMLAnchorElement = document.getElementById('linkToSkills') as HTMLAnchorElement;
+  const linkToSkills: HTMLAnchorElement = document.getElementById(
+    "linkToSkills"
+  ) as HTMLAnchorElement;
 
-    linkToSkills?.addEventListener('click', () => {
+  linkToSkills?.addEventListener("click", () => {
+    const skill: HTMLElement = document.getElementById("skill") as HTMLElement;
+    const skills: HTMLElement = document.getElementById(
+      "skills"
+    ) as HTMLElement;
 
-        const skill: HTMLElement = document.getElementById('skill') as HTMLElement
-        const skills: HTMLElement = document.getElementById('skills') as HTMLElement;
-
-        skill?.scrollIntoView({behavior: "smooth",});
-        skills?.scrollIntoView({behavior: "smooth",});
-    })
+    skill?.scrollIntoView({ behavior: "smooth" });
+    skills?.scrollIntoView({ behavior: "smooth" });
+  });
 </script>
